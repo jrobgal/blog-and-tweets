@@ -18,6 +18,7 @@ Route::post('/entries', [App\Http\Controllers\EntryController::class, 'store']);
 
 Route::get('/entries/{entryBySlug}', [App\Http\Controllers\GuestController::class, 'show']);
 
+//->middleware('can:update, entry')
 Route::get('/entries/{entry}/edit', [App\Http\Controllers\EntryController::class, 'edit']);
 
 Route::put('/entries/{entry}', [App\Http\Controllers\EntryController::class, 'update']);
