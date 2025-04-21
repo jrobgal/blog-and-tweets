@@ -16,4 +16,5 @@ class UserController extends Controller
 		//$user->entries
 		return view('users.show', compact('user', 'entries'));
 	}
+	
 }
